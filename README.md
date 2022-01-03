@@ -77,7 +77,7 @@ Steps :
 * configure cluster configuration file 
 * Install the kubernetes cluster
 
-vim cluster.yml
+```vim cluster.yml ```
 ``` 
    cluster_name: mykub
    ssh_key_path: ~/.ssh/cloud-key                                                                                                                                                              
