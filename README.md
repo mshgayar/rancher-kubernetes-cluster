@@ -9,9 +9,16 @@ High Available Kuberentes Cluster with rancher RKE
 ## Cluster Requirements
 This cluster is going to be deployed on 8 Machines ( virtual or baremetal) & Centos 7 Operating System
 * Linux Control Box (Your PC)
-* One Load balancer machine 
+* One Load balancer machine
+	kub-ha.lab.example.com
 * Three master nodes
+	kub-master01.lab.example.com
+	kub-master02.lab.example.com
+	kub-master03.lab.example.com
 * Three worker nodes
+	kub-worker01.lab.example.com
+	kub-worker02.lab.example.com
+	kub-worker03.lab.example.com
 * Centos 7 OS
 	
 ## Tools
