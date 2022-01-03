@@ -101,8 +101,8 @@ Now Kubernetes cluster is ready
 
 #### Part 4 : install rancher platform with helm on the kubernetes cluster
 * INSTALL RANCHER HELM CHART
-*``` helm repo add rancher-stable https://releases.rancher.com/server-charts/stable ```
+	-	``` helm repo add rancher-stable https://releases.rancher.com/server-charts/stable ```
 	-	``` kubectl create namespace cattle-syste ```
 
 *  Install the CustomResourceDefinition resources separately
-	-	`` kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml````
+	-	`` kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml```
