@@ -152,7 +152,7 @@ kube-system     rke-network-plugin-deploy-job-km6d7       0/1     Completed   0 
 	-	``` helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=kub-ha.lab.example.com```
 * Wait for Rancher to be rolled out:
 	- 	``` kubectl -n cattle-system rollout status deploy/rancher ```
-``` kubectl get pods --all-namespace ```
+* ``` kubectl get pods --all-namespace ```
 ```
 NAMESPACE                   NAME                                       READY   STATUS      RESTARTS   AGE
 cattle-fleet-local-system   fleet-agent-5f8798bfbf-89g6k               1/1     Running     2          16m
