@@ -116,5 +116,5 @@ Now Kubernetes cluster is ready
 * Install the cert-manager Helm chart
 	-	```helm install  cert-manager jetstack/cert-manager --namespace cert-manager  --version v1.0.4 ```
 * Once you have installed cert-manager, you can verify it is deployed correctly by checking the cert-manager namespace for running pods:
-	``` kubectl get pods --namespace cert-manager ```
-	``` helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=kub-ha.lab.example.com```
+	-	``` kubectl get pods --namespace cert-manager ```
+	-	``` helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=kub-ha.lab.example.com```
