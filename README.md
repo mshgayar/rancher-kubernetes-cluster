@@ -37,7 +37,28 @@ $ git clone https://github.com/mshgayar/rancher-kubernetes-cluster.git
 $ cd rancher-kubernetes-cluster
 ```
 
-#### Part 1 ) Cluster Prepration
+#### Part 1 ) Installaing Required Tools on Your Linux Control Machine
 ```
+## Install kubectl
+## https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+kubectl version
+
+
+## Install RKE
+## https://rancher.com/docs/rke/latest/en/installation/
+wget https://github.com/rancher/rke/releases/download/v1.0.0/rke_linux-amd64
+chmod +x rke_linux-amd64
+sudo mv ./rke_linux-amd64 /usr/local/bin/rke
+
+
+## Install Helm
+## https://helm.sh/docs/intro/
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+chmod +x get_helm.sh
+./get_helm.sh
+sudo chown root: /usr/local/bin/helm
 ```
 
