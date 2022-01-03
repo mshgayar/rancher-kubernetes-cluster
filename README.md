@@ -130,6 +130,29 @@ kub-worker01.lab.example.com   Ready    worker                     9m24s   v1.16
 kub-worker02.lab.example.com   Ready    worker                     9m23s   v1.16.3
 kub-worker03.lab.example.com   Ready    worker                     9m28s   v1.16.3
 ```
-
+	-	``` kubeclt get pods --all-namespaces ```
+```
+ingress-nginx   default-http-backend-67cf578fc4-4mq5r     1/1     Running     0          3m35s
+ingress-nginx   nginx-ingress-controller-64t7t            1/1     Running     2          3m35s
+ingress-nginx   nginx-ingress-controller-jkgr6            1/1     Running     1          3m35s
+ingress-nginx   nginx-ingress-controller-k7rgn            1/1     Running     0          3m35s
+ingress-nginx   nginx-ingress-controller-vk5hf            1/1     Running     1          3m35s
+ingress-nginx   nginx-ingress-controller-zjznp            1/1     Running     0          3m35s
+ingress-nginx   nginx-ingress-controller-zkt75            1/1     Running     0          3m35s
+kube-system     canal-282hx                               2/2     Running     0          10m
+kube-system     canal-blhzc                               2/2     Running     0          10m
+kube-system     canal-qfb52                               2/2     Running     0          10m
+kube-system     canal-sc6p8                               2/2     Running     2          10m
+kube-system     canal-tdzvg                               2/2     Running     1          10m
+kube-system     canal-vcnsl                               2/2     Running     2          10m
+kube-system     coredns-5c59fd465f-2mrp8                  1/1     Running     0          4m57s
+kube-system     coredns-5c59fd465f-7nzlt                  1/1     Running     0          4m33s
+kube-system     coredns-autoscaler-d765c8497-g8s55        1/1     Running     0          4m53s
+kube-system     metrics-server-64f6dffb84-h86vw           1/1     Running     0          4m6s
+kube-system     rke-coredns-addon-deploy-job-pbv4v        0/1     Completed   0          5m8s
+kube-system     rke-ingress-controller-deploy-job-5lgh9   0/1     Completed   0          3m59s
+kube-system     rke-metrics-addon-deploy-job-q5clr        0/1     Completed   0          4m1s
+kube-system     rke-network-plugin-deploy-job-km6d7       0/1     Completed   0          11m
+```
 ## Congrtaualtions : The cluster is up and running
 		you can access it through : https://kub-ha.lab.example.com
