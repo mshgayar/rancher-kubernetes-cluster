@@ -60,7 +60,15 @@ chmod +x get_helm.sh
 sudo chown root: /usr/local/bin/helm
 ```
 
-#### Part 2 ) Installing the Kubernetes Cluster with rke
+#### Part 2 )
+* prepare the cluster with ansible playbooks
+	-	Installing required packages
+	-	disbale firewall & enable selinux
+	-	Install the loadbalancer nginx
+	-	Installing docker
+
+
+#### Part 3 ) Installing the Kubernetes Cluster with rke
 Steps :
 * configure cluster configuration file 
 * Install the kubernetes cluster
