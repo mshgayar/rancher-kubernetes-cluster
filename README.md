@@ -12,18 +12,18 @@ This cluster is going to be deployed on 8 Machines ( virtual or baremetal) & Cen
 * One Load balancer machine 
 * Three master nodes
 * Three worker nodes
+* Centos 7 OS
 	
 ## Tools
 Required tools for the installation :
-* Ansible for Nodes preparation
+* Ansible for Nodes preparation (playbooks)
 * RKE for kubernetes cluster Installation
 * Kubeclt clinet
 * Helm chart for rancher deployment
 	
 ## Deployment
-To run this project, install it locally using npm:
 
 ```
-$ cd ../lorem
-$ npm install
-$ npm 
+$ git clone https://github.com/mshgayar/rancher-kubernetes-cluster.git
+$ cd rancher-kubernetes-cluster
+$ 
