@@ -1,0 +1,27 @@
+[lbs]
+kub-ha.lab.example.com
+
+[masters]
+kub-master01.lab.example.com
+kub-master02.lab.example.com
+kub-master03.lab.example.com
+
+[workers]
+kub-worker01.lab.example.com
+kub-worker02.lab.example.com
+kub-worker03.lab.example.com
+
+[hosts:children]
+masters
+workers
+
+[servers:children]
+lbs
+masters
+workers
+
+[servers:vars]
+ansible_ssh_user=centos
+ansible_become=true
+ansible_ssh_private_key_file=~/.ssh/cloud-key
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
