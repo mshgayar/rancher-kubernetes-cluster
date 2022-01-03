@@ -66,7 +66,7 @@ sudo chown root: /usr/local/bin/helm
 	-	disbale firewall & enable selinux
 	-	Install the loadbalancer nginx
 	-	Installing docker
-	-	
+		
 *	```ansible-playbook -i inventory 00-prerequiestes.yml ```
 *	```ansible-playbook -i inventory 01-lb-nginx.yaml ```
 *	```ansible-playbook -i inventory 02-install-docker.yaml ```
@@ -132,3 +132,7 @@ Save a copy of the following files in a secure location:
  	- 	The Kubernetes Cluster State file, this file contains credentials for full access to the cluster.
  - copy kube_config_cluster.yml to $HOME/.kube/config, or if you are working with multiple Kubernetes clusters
 	-	``` export KUBECONFIG=$(pwd)/kube_config_cluster.yml ```
+
+Now Kubernetes cluster is ready 
+* ``` kubectl get nodes ```
+* ``` kubectl get pods --all-namespaces
