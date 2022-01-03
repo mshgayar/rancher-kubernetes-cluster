@@ -61,12 +61,16 @@ sudo chown root: /usr/local/bin/helm
 ```
 
 #### Part 2 )
-* prepare the cluster with ansible playbooks
+* prepare the cluster (master and worker nodes ) with ansible playbooks
 	-	Installing required packages
 	-	disbale firewall & enable selinux
 	-	Install the loadbalancer nginx
 	-	Installing docker
-
+```
+	ansible-playbook -i inventory 00-prerequiestes.yml
+	ansible-playbook -i inventory 01-lb-nginx.yaml
+	ansible-playbook -i inventory 02-install-docker.yaml
+```
 
 #### Part 3 ) Installing the Kubernetes Cluster with rke
 Steps :
