@@ -59,3 +59,49 @@ chmod +x get_helm.sh
 sudo chown root: /usr/local/bin/helm
 ```
 
+#### Part 2 ) Installing the Kubernetes Cluster with rke
+Steps :
+* configure cluster configuration file 
+* Install the kubernetes cluster
+
+``` vim cluster.yml
+
+   cluster_name: mykub
+   ssh_key_path: ~/.ssh/cloud-key                                                                                                                                                              
+   nodes:
+     - address: 192.168.35.140
+       user: centos
+       role: [controlplane,  etcd, worker]
+       hostname_override: kub-master01.lab.example.com
+   
+    - address: 192.168.35.85
+      user: centos
+      role: [controlplane,  etcd, worker]
+      hostname_override: kub-master02.lab.example.com
+  
+    - address: 192.168.35.127
+      user: centos
+      role: [controlplane,  etcd, worker]
+      hostname_override: kub-master03.lab.example.com
+  
+    - address: 192.168.35.165
+      user: centos
+      role: [worker]
+      hostname_override: kub-worker01.lab.example.com
+  
+    - address: 192.168.35.84
+      user: centos
+      role: [worker]
+      hostname_override: kub-worker02.lab.example.com
+  
+    - address: 192.168.35.92
+      user: centos
+      role: [worker]
+      hostname_override: kub-worker03.lab.example.com
+  
+  services:
+    etcd:
+      snapshot: true
+      creation: 12h
+      retention: 168h
+```
