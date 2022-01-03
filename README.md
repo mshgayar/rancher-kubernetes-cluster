@@ -8,6 +8,7 @@ High Available Kuberentes Cluster with rancher RKE
 
 ## Cluster Requirements
 This cluster is going to be deployed on 8 Machines ( virtual or baremetal) & Centos 7 Operating System
+* all machines have a user 'centos' 
 * Linux Control Box (Your PC)
 	-	( ansible,rke,helm,kubectl) to be installed on this machine
 	-	configure ssh key to access all the nodes with pubkey
