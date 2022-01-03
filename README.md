@@ -193,3 +193,4 @@ kube-system                 rke-network-plugin-deploy-job-km6d7        0/1     C
 
 ## Congrtaualtions : The cluster is up and running
 		you can access it through : https://kub-ha.lab.example.com
+![Screen Shot 2022-01-03 at 4 51 58 PM](https://user-images.githubusercontent.com/14004114/147933212-d4412c55-e842-44f4-b35a-e67e8f313a39.png)
