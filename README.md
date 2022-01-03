@@ -121,3 +121,6 @@ Now Kubernetes cluster is ready
 * Wait for Rancher to be rolled out:
 	- 	``` kubectl -n cattle-system rollout status deploy/rancher ```
 	- 	``` kubectl get pods --all-namespaces ```
+
+#### Congrtaualtion : The cluster is up and running
+	-	```you can access it through : https://kub-ha.lab.example.com```
