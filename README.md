@@ -152,6 +152,44 @@ kube-system     rke-network-plugin-deploy-job-km6d7       0/1     Completed   0 
 	-	``` helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=kub-ha.lab.example.com```
 * Wait for Rancher to be rolled out:
 	- 	``` kubectl -n cattle-system rollout status deploy/rancher ```
+``` kubectl get pods --all-namespace ```
+```
+NAMESPACE                   NAME                                       READY   STATUS      RESTARTS   AGE
+cattle-fleet-local-system   fleet-agent-5f8798bfbf-89g6k               1/1     Running     2          16m
+cattle-fleet-system         fleet-controller-df79b5cd8-s5c5x           1/1     Running     1          19m
+cattle-fleet-system         gitjob-74cb74b59f-8755b                    1/1     Running     2          19m
+cattle-system               helm-operation-2hg69                       0/2     Completed   0          19m
+cattle-system               helm-operation-fw2rt                       0/2     Completed   0          18m
+cattle-system               helm-operation-j4jm9                       0/2     Completed   0          20m
+cattle-system               rancher-7c88dcd6c4-4pv2l                   0/1     Running     5          42m
+cattle-system               rancher-7c88dcd6c4-gqq7m                   0/1     Running     3          21m
+cattle-system               rancher-7c88dcd6c4-m69hn                   1/1     Running     11         51m
+cattle-system               rancher-webhook-6866767fdc-tn8zx           1/1     Running     0          17m
+cert-manager                cert-manager-85c9b9bb44-fkk2j              1/1     Running     4          53m
+cert-manager                cert-manager-cainjector-78fc9bb777-pllrr   1/1     Running     14         53m
+cert-manager                cert-manager-webhook-695f8b56cd-wxfgx      1/1     Running     1          53m
+ingress-nginx               default-http-backend-67cf578fc4-4mq5r      1/1     Running     1          61m
+ingress-nginx               nginx-ingress-controller-64t7t             1/1     Running     3          61m
+ingress-nginx               nginx-ingress-controller-jkgr6             1/1     Running     2          61m
+ingress-nginx               nginx-ingress-controller-k7rgn             1/1     Running     1          61m
+ingress-nginx               nginx-ingress-controller-vk5hf             1/1     Running     2          61m
+ingress-nginx               nginx-ingress-controller-zjznp             1/1     Running     1          61m
+ingress-nginx               nginx-ingress-controller-zkt75             1/1     Running     1          61m
+kube-system                 canal-282hx                                2/2     Running     2          68m
+kube-system                 canal-blhzc                                2/2     Running     2          68m
+kube-system                 canal-qfb52                                2/2     Running     2          68m
+kube-system                 canal-sc6p8                                2/2     Running     4          68m
+kube-system                 canal-tdzvg                                2/2     Running     5          68m
+kube-system                 canal-vcnsl                                2/2     Running     5          68m
+kube-system                 coredns-5c59fd465f-2mrp8                   1/1     Running     1          62m
+kube-system                 coredns-5c59fd465f-7nzlt                   1/1     Running     1          62m
+kube-system                 coredns-autoscaler-d765c8497-g8s55         1/1     Running     1          62m
+kube-system                 metrics-server-64f6dffb84-h86vw            1/1     Running     1          62m
+kube-system                 rke-coredns-addon-deploy-job-pbv4v         0/1     Completed   0          63m
+kube-system                 rke-ingress-controller-deploy-job-5lgh9    0/1     Completed   0          62m
+kube-system                 rke-metrics-addon-deploy-job-q5clr         0/1     Completed   0          62m
+kube-system                 rke-network-plugin-deploy-job-km6d7        0/1     Completed   0          69m
+```
 
 ## Congrtaualtions : The cluster is up and running
 		you can access it through : https://kub-ha.lab.example.com
