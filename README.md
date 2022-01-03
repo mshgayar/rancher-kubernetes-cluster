@@ -79,51 +79,12 @@ Steps :
 * Install the kubernetes cluster
 
 ```vim cluster.yml ```
-``` 
-   cluster_name: mykub
-   ssh_key_path: ~/.ssh/cloud-key                                                                                                                                                              
-   nodes:
-     - address: 192.168.35.140
-       user: centos
-       role: [controlplane,  etcd, worker]
-       hostname_override: kub-master01.lab.example.com
-   
-    - address: 192.168.35.85
-      user: centos
-      role: [controlplane,  etcd, worker]
-      hostname_override: kub-master02.lab.example.com
-  
-    - address: 192.168.35.127
-      user: centos
-      role: [controlplane,  etcd, worker]
-      hostname_override: kub-master03.lab.example.com
-  
-    - address: 192.168.35.165
-      user: centos
-      role: [worker]
-      hostname_override: kub-worker01.lab.example.com
-  
-    - address: 192.168.35.84
-      user: centos
-      role: [worker]
-      hostname_override: kub-worker02.lab.example.com
-  
-    - address: 192.168.35.92
-      user: centos
-      role: [worker]
-      hostname_override: kub-worker03.lab.example.com
-  
-  services:
-    etcd:
-      snapshot: true
-      creation: 12h
-      retention: 168h
-```
+    
 Install the kubernetes cluster with rke
 ```
 rke up --config cluster.yml
 ```
-#### Notes
+Notes
 Save a copy of the following files in a secure location:
  - cluster.yml: 
  	- 	The RKE cluster configuration file.
@@ -137,3 +98,11 @@ Save a copy of the following files in a secure location:
 Now Kubernetes cluster is ready 
 * ``` kubectl get nodes ```
 * ``` kubectl get pods --all-namespaces```
+
+#### Part 4 : install rancher platform with helm on the kubernetes cluster
+* INSTALL RANCHER HELM CHART
+``` helm repo add rancher-stable https://releases.rancher.com/server-charts/stable ```
+``` kubectl create namespace cattle-syste ```
+
+* # Install the CustomResourceDefinition resources separately
+``` kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml````
