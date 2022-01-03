@@ -35,6 +35,7 @@ Required tools for the installation :
 ```
 $ git clone https://github.com/mshgayar/rancher-kubernetes-cluster.git
 $ cd rancher-kubernetes-cluster
+```
 
 #### Part 1 ) Cluster Prepration
 ```
