@@ -96,31 +96,7 @@ Save a copy of the following files in a secure location:
 	-	``` export KUBECONFIG=$(pwd)/kube_config_cluster.yml ```
 
 Now Kubernetes cluster is ready 
-* ``` kubectl get nodes ```
-* ``` kubectl get pods --all-namespaces```
-
-#### Part 4 : install rancher platform with helm on the kubernetes cluster
-* INSTALL RANCHER HELM CHART
-	-	``` helm repo add rancher-stable https://releases.rancher.com/server-charts/stable ```
-	-	``` kubectl create namespace cattle-syste ```
-
-*  Install the CustomResourceDefinition resources separately
-	-	``` kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml```
-
-* Create the namespace for cert-manager
-	-	``` kubectl create namespace cert-manager ``` 
-*  Add the Jetstack Helm repository
-	-	``` helm repo add jetstack https://charts.jetstack.io```
-* Update your local Helm chart repository cache
-	- ```helm repo update ```
-* Install the cert-manager Helm chart
-	-	```helm install  cert-manager jetstack/cert-manager --namespace cert-manager  --version v1.0.4 ```
-* Once you have installed cert-manager, you can verify it is deployed correctly by checking the cert-manager namespace for running pods:
-	-	``` kubectl get pods --namespace cert-manager ```
-	-	``` helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=kub-ha.lab.example.com```
-* Wait for Rancher to be rolled out:
-	- 	``` kubectl -n cattle-system rollout status deploy/rancher ```
-	- 	``` kubectl get nodes ```
+``` kubectl get nodes ```
 ```
 NAME                           STATUS   ROLES                      AGE     VERSION
 kub-master01.lab.example.com   Ready    controlplane,etcd,worker   9m59s   v1.16.3
@@ -154,5 +130,28 @@ kube-system     rke-ingress-controller-deploy-job-5lgh9   0/1     Completed   0 
 kube-system     rke-metrics-addon-deploy-job-q5clr        0/1     Completed   0          4m1s
 kube-system     rke-network-plugin-deploy-job-km6d7       0/1     Completed   0          11m
 ```
+
+#### Part 4 : install rancher platform with helm on the kubernetes cluster
+* INSTALL RANCHER HELM CHART
+	-	``` helm repo add rancher-stable https://releases.rancher.com/server-charts/stable ```
+	-	``` kubectl create namespace cattle-syste ```
+
+*  Install the CustomResourceDefinition resources separately
+	-	``` kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml```
+
+* Create the namespace for cert-manager
+	-	``` kubectl create namespace cert-manager ``` 
+*  Add the Jetstack Helm repository
+	-	``` helm repo add jetstack https://charts.jetstack.io```
+* Update your local Helm chart repository cache
+	- ```helm repo update ```
+* Install the cert-manager Helm chart
+	-	```helm install  cert-manager jetstack/cert-manager --namespace cert-manager  --version v1.0.4 ```
+* Once you have installed cert-manager, you can verify it is deployed correctly by checking the cert-manager namespace for running pods:
+	-	``` kubectl get pods --namespace cert-manager ```
+	-	``` helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=kub-ha.lab.example.com```
+* Wait for Rancher to be rolled out:
+	- 	``` kubectl -n cattle-system rollout status deploy/rancher ```
+
 ## Congrtaualtions : The cluster is up and running
 		you can access it through : https://kub-ha.lab.example.com
