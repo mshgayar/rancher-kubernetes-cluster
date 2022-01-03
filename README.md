@@ -67,9 +67,9 @@ sudo chown root: /usr/local/bin/helm
 	-	Install the loadbalancer nginx
 	-	Installing docker
 
-	```ansible-playbook -i inventory 00-prerequiestes.yml```
-	```ansible-playbook -i inventory 01-lb-nginx.yaml```
-	```ansible-playbook -i inventory 02-install-docker.yaml```
+	```ansible-playbook -i inventory 00-prerequiestes.yml ```
+	```ansible-playbook -i inventory 01-lb-nginx.yaml ```
+	```ansible-playbook -i inventory 02-install-docker.yaml ```
 
 
 #### Part 3 ) Installing the Kubernetes Cluster with rke
