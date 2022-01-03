@@ -123,4 +123,4 @@ Now Kubernetes cluster is ready
 	- 	``` kubectl get pods --all-namespaces ```
 
 ## Congrtaualtions : The cluster is up and running
-		```you can access it through : https://kub-ha.lab.example.com```
+		you can access it through : https://kub-ha.lab.example.com
