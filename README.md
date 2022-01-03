@@ -130,5 +130,5 @@ Save a copy of the following files in a secure location:
  	- 	The Kubeconfig file for the cluster, this file contains credentials for full access to the cluster.
  - cluster.rkestate: 
  	- 	The Kubernetes Cluster State file, this file contains credentials for full access to the cluster.
- - Move this file to $HOME/.kube/config, or if you are working with multiple Kubernetes clusters, set the KUBECONFIG environmental variable to the path of kube_config_rancher-cluster.yml
-	-	export KUBECONFIG=$(pwd)/kube_config_rancher-cluster.ym
+ - copy kube_config_cluster.yml to $HOME/.kube/config, or if you are working with multiple Kubernetes clusters
+	-	``` export KUBECONFIG=$(pwd)/kube_config_rancher-cluster.ym ```
