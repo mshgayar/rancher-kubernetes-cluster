@@ -120,7 +120,16 @@ Now Kubernetes cluster is ready
 	-	``` helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=kub-ha.lab.example.com```
 * Wait for Rancher to be rolled out:
 	- 	``` kubectl -n cattle-system rollout status deploy/rancher ```
-	- 	``` kubectl get pods --all-namespaces ```
+	- 	``` kubectl get nodes ```
+	- 	```
+NAME                           STATUS   ROLES                      AGE     VERSION
+kub-master01.lab.example.com   Ready    controlplane,etcd,worker   9m59s   v1.16.3
+kub-master02.lab.example.com   Ready    controlplane,etcd,worker   9m38s   v1.16.3
+kub-master03.lab.example.com   Ready    controlplane,etcd,worker   9m39s   v1.16.3
+kub-worker01.lab.example.com   Ready    worker                     9m24s   v1.16.3
+kub-worker02.lab.example.com   Ready    worker                     9m23s   v1.16.3
+kub-worker03.lab.example.com   Ready    worker                     9m28s   v1.16.3
+```
 
 ## Congrtaualtions : The cluster is up and running
 		you can access it through : https://kub-ha.lab.example.com
