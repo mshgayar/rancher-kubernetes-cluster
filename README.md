@@ -118,3 +118,6 @@ Now Kubernetes cluster is ready
 * Once you have installed cert-manager, you can verify it is deployed correctly by checking the cert-manager namespace for running pods:
 	-	``` kubectl get pods --namespace cert-manager ```
 	-	``` helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=kub-ha.lab.example.com```
+* Wait for Rancher to be rolled out:
+	- 	``` kubectl -n cattle-system rollout status deploy/rancher ```
+	- 	``` kubectl get pods --all-namespaces ```
