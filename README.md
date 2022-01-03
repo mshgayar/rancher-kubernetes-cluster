@@ -9,6 +9,7 @@ High Available Kuberentes Cluster with rancher RKE
 ## Cluster Requirements
 This cluster is going to be deployed on 8 Machines ( virtual or baremetal) & Centos 7 Operating System
 * Linux Control Box (Your PC)
+	-	( ansible,rke,helm,kubectl) to be installed on this machine
 * All machines have DNS resolution name thorugh DNS or /etc/hosts
 * One Load balancer machine (Nginx)
 	-	kub-ha.lab.example.com
