@@ -121,7 +121,7 @@ Now Kubernetes cluster is ready
 * Wait for Rancher to be rolled out:
 	- 	``` kubectl -n cattle-system rollout status deploy/rancher ```
 	- 	``` kubectl get nodes ```
-	- 	```
+```
 NAME                           STATUS   ROLES                      AGE     VERSION
 kub-master01.lab.example.com   Ready    controlplane,etcd,worker   9m59s   v1.16.3
 kub-master02.lab.example.com   Ready    controlplane,etcd,worker   9m38s   v1.16.3
