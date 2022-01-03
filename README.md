@@ -12,13 +12,13 @@ This cluster is going to be deployed on 8 Machines ( virtual or baremetal) & Cen
 * One Load balancer machine
 	kub-ha.lab.example.com
 * Three master nodes
-	kub-master01.lab.example.com
-	kub-master02.lab.example.com
-	kub-master03.lab.example.com
+	-	kub-master01.lab.example.com
+	-	kub-master02.lab.example.com
+	-	kub-master03.lab.example.com
 * Three worker nodes
-	kub-worker01.lab.example.com
-	kub-worker02.lab.example.com
-	kub-worker03.lab.example.com
+	-	kub-worker01.lab.example.com
+	-	kub-worker02.lab.example.com
+	-	kub-worker03.lab.example.com
 * Centos 7 OS
 	
 ## Tools
