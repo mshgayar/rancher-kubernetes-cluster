@@ -77,7 +77,7 @@ Steps :
 * configure cluster configuration file 
 * Install the kubernetes cluster
 
-* vim cluster.yml
+vim cluster.yml
 ``` 
    cluster_name: mykub
    ssh_key_path: ~/.ssh/cloud-key                                                                                                                                                              
@@ -118,7 +118,7 @@ Steps :
       creation: 12h
       retention: 168h
 ```
-* Install the kubernetes cluster with rke
+Install the kubernetes cluster with rke
 ```
 rke up --config cluster.yml
 ```
