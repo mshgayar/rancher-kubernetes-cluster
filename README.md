@@ -130,7 +130,7 @@ kub-worker01.lab.example.com   Ready    worker                     9m24s   v1.16
 kub-worker02.lab.example.com   Ready    worker                     9m23s   v1.16.3
 kub-worker03.lab.example.com   Ready    worker                     9m28s   v1.16.3
 ```
-	-	``` kubeclt get pods --all-namespaces ```
+``` kubeclt get pods --all-namespaces ```
 ```
 ingress-nginx   default-http-backend-67cf578fc4-4mq5r     1/1     Running     0          3m35s
 ingress-nginx   nginx-ingress-controller-64t7t            1/1     Running     2          3m35s
