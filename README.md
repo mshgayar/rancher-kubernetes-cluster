@@ -105,4 +105,16 @@ Now Kubernetes cluster is ready
 	-	``` kubectl create namespace cattle-syste ```
 
 *  Install the CustomResourceDefinition resources separately
-	-	`` kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml```
+	-	``` kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml```
+
+* Create the namespace for cert-manager
+	-	``` kubectl create namespace cert-manager ``` 
+*  Add the Jetstack Helm repository
+	-	``` helm repo add jetstack https://charts.jetstack.io```
+* Update your local Helm chart repository cache
+	- ```helm repo update ```
+* Install the cert-manager Helm chart
+	-	```helm install  cert-manager jetstack/cert-manager --namespace cert-manager  --version v1.0.4 ```
+* Once you have installed cert-manager, you can verify it is deployed correctly by checking the cert-manager namespace for running pods:
+	``` kubectl get pods --namespace cert-manager ```
+	``` helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=kub-ha.lab.example.com```
