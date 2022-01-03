@@ -135,4 +135,4 @@ Save a copy of the following files in a secure location:
 
 Now Kubernetes cluster is ready 
 * ``` kubectl get nodes ```
-* ``` kubectl get pods --all-namespaces
+* ``` kubectl get pods --all-namespaces```
