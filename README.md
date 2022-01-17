@@ -1,4 +1,4 @@
-# rancher-kubernetes-cluster
+# rancher-ha-kubernetes-cluster
 High Available Kuberentes Cluster with rancher RKE
 
 ## Table of contents
